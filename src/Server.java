@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 public class Server
 {
     BlockingQueue<Runnable> queue;
-    Classifier classifier = new Classifier();
+    Classifier classifier = new Classifier("hi");
     int transRate;
     int corePoolSize, maxPoolSize, queueSize;
 

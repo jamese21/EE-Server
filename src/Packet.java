@@ -10,13 +10,23 @@ public class Packet
     String maxJitter;
     String maxLatency;
     String data;
+    int priority;
     long startTime, endTime;
 
-    public Packet(String data, String maxJitter, String maxLatency)
+    public Packet(String data, String maxJitter, String maxLatency, int priority)
     {
         this.maxJitter = maxJitter;
         this.data = data;
         this.maxLatency = maxLatency;
+        this.priority = priority;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 
     public String getMaxJitter() {
